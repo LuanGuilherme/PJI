@@ -1,0 +1,254 @@
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: 'Noto Sans', sans-serif;
+
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+        background-color: #ededed;
+        line-height: 22px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Menu */
+.nome{
+    background-color: #990b0b;
+    color: white;
+    font-size: 200%;
+    padding: 0.5% 0 0.5% 2%;
+    text-shadow: black 2px 3px 2px;
+    border-bottom-style: solid;
+    border-width: 3px;
+    border-color: #2e2e2e;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+}
+
+.nome h1 {
+    margin: auto 0 !important;
+}
+
+.menu ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #d40202;
+    text-align: center;
+    display: inline-grid;
+    grid-template-columns: repeat(4, auto);
+    width: 100%;
+}
+
+.menu li {
+    padding: 4% 0 4% 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+#menu a:focus, #menu a:hover {
+    text-decoration: underline;
+    font-size: 110%;
+}
+
+#logo {
+    width: 50%;
+    height: 280px;
+    margin: 0 25% 0 25%;
+}
+
+.botao{
+    border-radius: 1%;
+    background-color: #d40202;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 16px;
+    border-style: none;
+    color: #FFF;
+    margin: 10px 10px 0 20px;
+}
+.botao:hover, .botao:focus {
+    color: white;
+    background-color: #464550;
+}
+
+
+/*Rodapé*/
+
+.rodape{
+    background-color: #FFBF00;
+    color: white;
+    font-size: 35px;
+    padding: 2% 0 1.5% 2%;
+    height: 8vh;
+}
+
+.rodape .icone{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 2vh;
+    float: right;
+}
+
+.rodape p {
+    display: inline;
+}
+
+.rodape a {
+    width: 70px;
+    height: 70px;
+}
+
+/* Lanches, Bebidas e Porções */
+
+.titulo {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.produtos ul{
+   margin-left: 10%;
+   margin-right: 10%;
+   padding: 10px 0 10px 0;
+}
+
+.produtos {
+    min-height: 30vh;
+}
+
+.mosaico {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.sub-mosaico{
+    border-radius: 5px;
+    padding: 1vh 1vh;
+    background-color: white;
+    margin: 10px 0 0 5%;
+}
+
+.preco {
+    float: right;
+}
+
+.nome-produto {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+ /* Informações */
+
+ .main {
+    margin: 8vh 0;
+    display: grid;
+    grid-template-columns: repeat(2, auto); 
+ }
+
+.endereco{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.endereco-text {
+    margin-bottom: 70px;
+}
+
+.informacoes-textuais {
+    margin: auto 0;
+    font-size: 130%;
+}
+
+.pagamento{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.imgs img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 0 auto;
+}
+.imgs {
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: repeat(3, auto);
+    margin-bottom: 3%;
+}
+
+.desc {
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+/* Barra lateral */
+
+.barra-lateral {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    position: fixed;
+    left: -34.6vh;
+    background-color: white;
+}
+
+.barra-lateral:focus, .barra-lateral:hover {
+    left: 0;
+}
+
+.botao-acessibilidade {
+    background-color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 16px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+}
+
+.barra-lateral img{
+    width: 50px;
+    height: 50px;
+}
