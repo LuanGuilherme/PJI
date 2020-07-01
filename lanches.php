@@ -23,12 +23,12 @@ IMPLEMENTAR A NORMA C22 DA WCAG!!! (alto contraste e aumento de fonte)
 </section>
 
 <section class="produtos" role="list" aria-label="Adicionais do lanche">
-    <h1 class="titulo" tabindex="30">Adicionais</h1>
+    <h1 class="titulo" tabindex="37">Adicionais</h1>
     
     <ul>
         <div class="mosaico">
             <?php for ($i = 0; $i < count($produtosAd); $i++) : ?>
-            <div tabindex="<?= $i + 31 ?>" class="sub-mosaico">
+            <div tabindex="<?= $i + 38 ?>" class="sub-mosaico">
                 <li><?= $produtosAd[$i]["DescricaoAdicional"]?> </li>
                 <li> <script> converteReal(<?= $produtosAd[$i]["PrecoAdicional"] ?>)</script></li>
             </div>
