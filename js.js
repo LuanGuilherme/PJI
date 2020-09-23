@@ -36,7 +36,7 @@ function converteReal(valor) {
 }
 
 function contraste (pagina) {
-    let verifica = getCookie("Contraste")
+    let verifica = getCookie(document.cookie)
     if (pagina != 'home') {
         var vetor = ['nome', 'sub-mosaico', 'menu', 'rodape', 'ul']
         var mosaico = document.getElementsByClassName('sub-mosaico')
@@ -65,7 +65,7 @@ function contraste (pagina) {
                 links[i].style.color = '#FC0'
             }
             document.getElementById("contraste").value = "Desativar alto contraste"
-            document.cookie = "Contraste = timo"
+            document.cookie = "Contraste = timo; secure"
         }
     } else {
         if (verifica){
@@ -96,18 +96,22 @@ function contraste (pagina) {
             }
             
             document.getElementById("contraste").value = "Desativar alto contraste"
-            document.cookie = "Contraste = timo"
+            document.cookie = "Contraste = timo; secure"
         }
     }
  
 }
 
 function getCookie(name) {
-    var re = new RegExp(name + "=([^;]+)");
-    var value = re.exec(document.cookie);
-    return (value != null) ? unescape(value[1]) : null;
+    if (name == "") {
+        return false;
+    } else {
+        return true;
+    }
+
 }
 
 function delCookie(){
-    document.cookie = "Contraste =;expires=Thu, 01 Jan 1970 00:00:00 GMT"
+    document.cookie = "Contraste=;expires=Thu, 01 Jan 1970 00:00:00 GMT"
+    console.log("Deu")
 }

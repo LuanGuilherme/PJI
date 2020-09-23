@@ -8,7 +8,7 @@ G134 Validar html
     
     <section class="endereco" role="main" aria-label="Mapa" tabindex="9">
         
-	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d914.1140232428878!2d-48.02424943762067!3d-23.58797040111793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1536160672453" aria-label="Mapa contendo a localização da lanchonete" width="600" height="450" frameborder="0" style="border:0; margin: 0 auto 0 auto" allowfullscreen title="Mapa contendo a localização da lanchonete"></iframe>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d914.1140232428878!2d-48.02424943762067!3d-23.58797040111793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1536160672453" aria-label="Mapa contendo a localização da lanchonete" width="100%" height="100%" frameborder="0" style="border:0; margin: 0 auto 0 auto" allowfullscreen title="Mapa contendo a localização da lanchonete"></iframe>
 
     </section>
     <div class="informacoes-textuais">
@@ -26,7 +26,7 @@ G134 Validar html
 
                     <p>Horário de funcionamento</p>
                     <p>Das 18 horas às 24 horas</p>
-                    <p>Formas de pagamento: Cartões Visa e Credicard; Dinheiro</p>
+                    <p>Formas de pagamento: dinheiro, cartões de crédito e débito</p>
         </article>
     </div>
 </div>
