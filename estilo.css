@@ -46,21 +46,9 @@ table {
 }
 
 /* Menu */
-.nome{
-    background-color: #990b0b;
-    color: white;
-    font-size: 200%;
-    padding: 0.5% 0 0.5% 2%;
-    text-shadow: black 2px 3px 2px;
-    border-bottom-style: solid;
-    border-width: 3px;
-    border-color: #2e2e2e;
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-}
-
-.nome h1 {
+.nome h4 {
     margin: auto 0 !important;
+    text-shadow: black 2px 3px 2px;
 }
 
 .menu ul {

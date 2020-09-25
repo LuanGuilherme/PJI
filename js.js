@@ -1,5 +1,5 @@
 function esconde(menu) {
-    var n = document.getElementById("menu")
+    var n = document.getElementsByClassName('menus')
     //n.style.display =  (n.style.display != 'none' ? 'none' : '' );
     if (n.style.display != 'none') {
         n.style.display = 'none'
