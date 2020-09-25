@@ -60,6 +60,7 @@ function contraste (pagina) {
             }
 
             for (let i = 0; i < mosaico.length; i++) {
+                console.log(mosaico[i])
                 mosaico[i].style.backgroundColor = 'black'
                 mosaico[i].style.color = 'white'
             }
