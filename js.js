@@ -36,43 +36,43 @@ function converteReal(valor) {
 }
 
 function contraste (pagina) {
-    let verifica = getCookie(document.cookie)
-    if (pagina != 'home') {
-        var vetor = ['nome', 'sub-mosaico', 'menu', 'rodape', 'ul']
-        var mosaico = document.getElementsByClassName('sub-mosaico')
-        var body = document.getElementsByTagName('body')
-        var btn = document.getElementById('esconde_menu')
-        if (verifica) {
-            location.reload()
-            delCookie()
-            document.getElementById("contraste").value = "Ativar alto contraste"
-        } else {
+    if (isset(document.cookie)) {
+        location.reload()
+        delCookie()
+        document.getElementById("contraste").value = "Ativar alto contraste"
+    } else {
+
+        if (pagina != 'home') {
+            let vetor = ['nome', 'sub-mosaico', 'menu', 'rodape', 'ul']
+            let mosaico = document.getElementsByClassName('sub-mosaico')
+            let body = document.getElementsByTagName('body')
+            let btn = document.getElementById('esconde_menu')
+
             body[0].style.backgroundColor = '#111'
             body[0].style.color = 'white'
             btn.style.backgroundColor = '#111'
             btn.style.color = '#FC0'
+
             for (let i = 0; i < vetor.length; i++){ 
-                var timo = document.getElementsByClassName(vetor[i])
-                timo[0].style.backgroundColor = 'black'
-                timo[0].style.color = 'white'
+                let temp = document.getElementsByClassName(vetor[i])
+                temp[0].style.backgroundColor = 'black'
+                temp[0].style.color = 'white'
             }
+
             for (let i = 0; i < mosaico.length; i++) {
                 mosaico[i].style.backgroundColor = 'black'
                 mosaico[i].style.color = 'white'
             }
-            var links = document.getElementsByTagName('a')
+
+            let links = document.getElementsByTagName('a')
             for (let i = 0; i < links.length; i++) {
                 links[i].style.color = '#FC0'
             }
+
             document.getElementById("contraste").value = "Desativar alto contraste"
-            document.cookie = "Contraste = timo; secure"
-        }
-    } else {
-        if (verifica){
-            location.reload()
-            delCookie()
-            document.getElementById("contraste").value = "Ativar alto contraste"
-        }else{
+            document.cookie = "Contraste"
+
+        } else {
             let nome = document.getElementsByClassName('nome')
             let menu = document.getElementsByClassName('menu')
             let rodape = document.getElementsByClassName('rodape')
@@ -91,27 +91,28 @@ function contraste (pagina) {
             ul[0].style.color = 'white'
             btn.style.backgroundColor = '#111'
             btn.style.color = '#FC0'
+
             for (let i = 0; i < links.length; i++) {
                 links[i].style.color = '#FC0'
             }
             
             document.getElementById("contraste").value = "Desativar alto contraste"
-            document.cookie = "Contraste = timo; secure"
+            document.cookie = "Contraste"
         }
-    }
- 
+    } 
 }
 
-function getCookie(name) {
+//Se o cookie estiver setado, retorna true; se não, false
+function isset(name) {
     if (name == "") {
-        return false;
+        return false
     } else {
-        return true;
+        return true
     }
 
 }
 
 function delCookie(){
-    document.cookie = "Contraste=;expires=Thu, 01 Jan 1970 00:00:00 GMT"
+    document.cookie = "Contraste;expires=Thu, 01 Jan 1970 00:00:00 GMT"
     console.log("Deu")
 }
