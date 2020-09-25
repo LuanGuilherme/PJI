@@ -1,9 +1,9 @@
 <?php
 
-header("Content-type: text/html; charset=utf-8");
+header("Content-type: text/html; charset=utfe-8");
 
 function cnx () {
-    $cnx = mysqli_connect("127.0.0.1", "pji", "123", "Fastburguer");
+    $cnx = mysqli_connect("localhost", "root", "", "fastburguer");
     mysqli_set_charset($cnx, 'utf8');
     return $cnx;
 }
