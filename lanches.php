@@ -5,7 +5,7 @@
 <!--
 IMPLEMENTAR A NORMA C22 DA WCAG!!! (alto contraste e aumento de fonte)
 -->
-<section class="produtos" role="list" aria-label="Cardápio de lanches">
+<section class="produtos mt-5" role="list" aria-label="Cardápio de lanches">
     <h1 class="titulo" tabindex="8">Lanches</h1>
     
     <ul>

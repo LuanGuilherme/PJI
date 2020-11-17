@@ -1,13 +1,14 @@
 <?php 
+
 header('Content-language: pt-br');
 
 $page = 'home';
 
 if (isset($_GET["page"]) && $_GET["page"] != "home") {
 	$page = $_GET["page"];
-        require 'PHP/controle.php';
-        header("Content-type: text/html; charset=utf-8"); 
-        mysqli_query(cnx(), "SET character_set_results = 'utf8'");
+		require 'PHP/controle.php';
+		header("Content-type: text/html; charset=utf-8"); 
+		mysqli_query(cnx(), "SET character_set_results = 'utf8'");
 }
 
 switch ($page) {
@@ -44,3 +45,5 @@ switch ($page) {
 }
 
 require 'rodape.php';
+
+?>

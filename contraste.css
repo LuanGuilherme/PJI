@@ -26,8 +26,9 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-        background-color: #ededed;
-        line-height: 22px;
+	background-color: #0d0e0e !important;
+	color: whitesmoke !important;
+    line-height: 22px;
 }
 ol, ul {
 	list-style: none;
@@ -44,6 +45,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 
 /* Menu */
 
@@ -108,7 +110,7 @@ table {
 .sub-mosaico{
     border-radius: 5px;
     padding: 1.7vh 1.7vh;
-    background-color: #e9ecef;
+    background-color: #26292d;
     margin: 10px 0 0 5%;
 }
 

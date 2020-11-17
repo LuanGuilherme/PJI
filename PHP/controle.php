@@ -63,16 +63,24 @@ function selecionarLanche (){
     for ($i = 1; $i < 29; $i++) {
         $retorno = mysqli_query(cnx(), "CALL selectLanches($i)");
         $produtos[] = mysqli_fetch_assoc($retorno);
+        $produtos[$i-1]["DescricaoLanche"] = 
+            removeVirgula($produtos[$i-1]["DescricaoLanche"],
+            strlen($produtos[$i-1]["DescricaoLanche"])-1);     //Quebra de linha em virtude de legibilidade
     }
-    //return (removeVirgula($produtos, $tamanho));
     return $produtos;
 }
 
+//Percorre recursivamente de trás para frente a string de ingredientes dos lanches.
+//Tendo encontrado a última vírgula, separa a string em antes e depois dela.
+//Ao final, concatena o começo e o final anteriormente separados com a adição de "e" ao meio.
 function removeVirgula ($produtos, $tamanho) {
     if ($produtos[$tamanho] == ",") {
-        $produtos[$tamanho] = " e";
+        $comeco = substr($produtos, 0, $tamanho);
+        $final = substr($produtos, $tamanho+1);
+        $produtos = $comeco." e ".$final;
         return $produtos;
     }
-    print_r($produtos[$tamanho]);
-    removeVirgula($produtos, $tamanho-1);
+    return removeVirgula($produtos, $tamanho-1);
 }
+
+?>

@@ -1,23 +1,27 @@
-function esconde(menu) {
-    var n = document.getElementsByClassName('menus')
-    //n.style.display =  (n.style.display != 'none' ? 'none' : '' );
-    if (n.style.display != 'none') {
-        n.style.display = 'none'
-        document.getElementById("esconde_menu").value = "Mostrar menu"
-    } else {
-        n.style.display = ''
-        document.getElementById("esconde_menu").value = "Esconder menu"
+function esconde() {
+    var n = document.querySelectorAll('.menus');
+
+    n.forEach(trocaDisplay)
+    function trocaDisplay(n) {
+        if (n.style.display != 'none') {
+            n.style.display = 'none';
+            document.getElementById("esconde_menu").value = "Mostrar menu";
+        } else {
+            n.style.display = 'block';
+            document.getElementById("esconde_menu").value = "Esconder menu";
+        }
     }
+    
 }
 
 function expandeLink() { //Vide SCR30
     var url = document.getElementById("linkFacebook").textContent
     if (url !== "Página no Facebook (link)") {
-        document.getElementById("linkFacebook").textContent = "Página no Facebook (link)"
-        document.getElementById("comprime_link").value = "Expandir Links"
+        document.getElementById("linkFacebook").textContent = "Página no Facebook (link)";
+        document.getElementById("comprime_link").textContent = "Expandir Links";
     } else {
-        document.getElementById("linkFacebook").textContent = "https://www.facebook.com/Rei-Fastburguer (link)"
-        document.getElementById("comprime_link").value = "Comprimir Links"
+        document.getElementById("linkFacebook").textContent = "https://www.facebook.com/Rei-Fastburguer (link)";
+        document.getElementById("comprime_link").textContent = "Comprimir Links";
     }
 }
 
@@ -39,10 +43,11 @@ function contraste (pagina) {
     if (isset(document.cookie)) {
         location.reload()
         delCookie()
-        document.getElementById("contraste").value = "Ativar alto contraste"
+        document.getElementById("contraste").value = "Ativar Contraste"
     } else {
 
         if (pagina != 'home') {
+
             let vetor = ['nome', 'sub-mosaico', 'menu', 'rodape', 'ul']
             let mosaico = document.getElementsByClassName('sub-mosaico')
             let body = document.getElementsByTagName('body')
@@ -69,34 +74,27 @@ function contraste (pagina) {
                 links[i].style.color = '#FC0'
             }
 
-            document.getElementById("contraste").value = "Desativar alto contraste"
+            document.getElementById("contraste").value = "Desativar Contraste"
             document.cookie = "Contraste"
 
         } else {
-            let nome = document.getElementsByClassName('nome')
-            let menu = document.getElementsByClassName('menu')
-            let rodape = document.getElementsByClassName('rodape')
-            let ul = document.getElementsByClassName('ul')
-            let body = document.getElementsByTagName('body')
-            let btn = document.getElementById('esconde_menu')
-            let links = document.getElementsByTagName('a')
+            let menu    = document.getElementsByClassName('menu')
+            let rodape  = document.getElementsByClassName('rodape')
+            let body    = document.getElementsByTagName('body')
+            let links   = document.getElementsByTagName('a')
             
-            body[0].style.backgroundColor = '#111111'
-            body[0].style.color = 'white'
-            nome[0].style.backgroundColor = '#000000'
-            menu[0].style.backgroundColor = '#0a0a0a'
-            rodape[0].style.backgroundColor = '#0c0c0c'
-            rodape[0].style.color = 'white'
-            ul[0].style.backgroundColor = '#000000'
-            ul[0].style.color = 'white'
-            btn.style.backgroundColor = '#111'
-            btn.style.color = '#FC0'
+            body[0].style.backgroundColor      = '#111111'
+            body[0].style.color                = 'white'
+            menu[0].style.backgroundColor      = '#0a0a0a'
+            rodape[0].style.backgroundColor    = '#0c0c0c'
+            rodape[0].style.color              = 'white'
+            // links[i].style.color = '#FC0'
 
             for (let i = 0; i < links.length; i++) {
                 links[i].style.color = '#FC0'
             }
             
-            document.getElementById("contraste").value = "Desativar alto contraste"
+            document.getElementById("contraste").textContent = "Desativar Contraste"
             document.cookie = "Contraste"
         }
     } 

@@ -1,15 +1,20 @@
-<?php $produtos_bebidas = selecionarBebidas(); ?>
+<?php 
 
-<section class="produtos" role="list" aria-label="Cardápio de bebidas">
+$produtos_bebidas = selecionarBebidas(); 
+
+$count = 9;
+?> 
+
+<section class="produtos mt-5" role="list" aria-label="Cardápio de bebidas">
     <h1 class="titulo" tabindex="8">Bebidas</h1>
     <ul>
         <div class="mosaico">
-            <?php for ($i = 0; $i < count($produtos_bebidas); $i++) : ?>
-                <div tabindex="<?= $i + 9?>" class = "sub-mosaico">
-                <li><?=$produtos_bebidas[$i]['NomeBebida']?></li>
-                <li><script> converteReal(<?=$produtos_bebidas[$i]['PrecoBebida']?>)</script></li>
+            <?php foreach ($produtos_bebidas as $item) : ?>
+                <div tabindex="<?= $count += 1 ?>" class = "sub-mosaico">
+                    <li><?=$item['NomeBebida']?></li>
+                    <li><script> converteReal(<?=$item['PrecoBebida']?>)</script></li>
                 </div>
-            <?php endfor; ?>
+            <?php endforeach; ?>
         </div>
     </ul>
 </section>
