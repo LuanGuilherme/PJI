@@ -1,6 +1,6 @@
 <?php
 
-header("Content-type: text/html; charset=utf-8");
+header("Content-type: text/html; charset=utfe-8");
 
 function cnx () {
     $cnx = mysqli_connect("localhost", "root", "", "fastburguer");
