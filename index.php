@@ -27,7 +27,7 @@ switch ($page) {
 }
 
 require 'menu.php';
-require 'In_Contraste.php';
+// require 'In_Contraste.php';
 
 switch ($page) {
 	case 'bebidas':

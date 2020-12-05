@@ -8,8 +8,10 @@ IMPLEMENTAR A NORMA C22 DA WCAG!!! (alto contraste e aumento de fonte)
 <section class="produtos mt-5" role="list" aria-label="Cardápio de lanches">
     <h1 class="titulo" tabindex="8">Lanches</h1>
     
+    <?php require 'In_Contraste.php'; ?>
+
     <ul>
-        <div class="mosaico">
+        <div class="mosaico col">
             <?php for ($i = 0; $i < 28; $i++) : ?>
             <div tabindex="<?= $i + 9?>" class="sub-mosaico">
                 <li class="nome-produto"> <?= $produtos[$i]["NomeLanche"]?> </li>

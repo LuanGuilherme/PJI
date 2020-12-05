@@ -152,6 +152,36 @@ table {
 
 .lBar{
     position: fixed;
-    margin-top: 10%;
     z-index: 1000;
+}
+
+
+
+/* Responsividade */
+
+@media (max-width: 700px) {
+    #esconde_menu {
+      display: none;
+    }
+
+    .row{
+        display: block !important;
+    }
+    #contraste{
+        display: none;
+    }
+    #comprime_link{
+        display: none;
+    }
+
+    .mosaico {
+        grid-template-columns: repeat(1, auto) !important;
+    }
+
+    #footerMinDiv{
+        position: unset;
+    }
+    #footerText{
+        white-space: normal;
+    }
 }

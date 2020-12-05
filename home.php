@@ -4,6 +4,9 @@ Talvez precise fazer o SCR27
 G134 Validar html
 -->
 <h1 class="titulo mt-5" tabindex="8">Como nos achar</h1>
+
+<?php require 'In_Contraste.php'; ?>
+
 <div class="main row">
     
     <section class="endereco col-md-4 col-sm-12" role="main" aria-label="Mapa" tabindex="9">

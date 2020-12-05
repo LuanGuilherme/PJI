@@ -8,6 +8,8 @@
 <section class="produtos mt-5" role="list" aria-label="Cardápio de porções">
     <h1 class="titulo" tabindex="8">Porções</h1>
     
+    <?php require 'In_Contraste.php'; ?>
+
     <ul>
         <div class="mosaico">
             <?php for ($i = 0; $i < count($produtosBt); $i++) : ?>
